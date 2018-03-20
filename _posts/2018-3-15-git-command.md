@@ -19,3 +19,9 @@ git remote update origin --prune
 ```
 git log -p filename
 ```
+
+#### 为当前项目指定一个SSH
+```
+ssh-add -K ~/.ssh/id_rsa
+```
+_Note: The -K option is Apple's standard version of ssh-add, which stores the passphrase in your keychain for you when you add an ssh key to the ssh-agent._
