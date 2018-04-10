@@ -25,3 +25,8 @@ git log -p filename
 ssh-add -K ~/.ssh/id_rsa
 ```
 _Note: The -K option is Apple's standard version of ssh-add, which stores the passphrase in your keychain for you when you add an ssh key to the ssh-agent._
+
+#### 查看图形化
+```
+git log --all --decorate --oneline --graph
+```
