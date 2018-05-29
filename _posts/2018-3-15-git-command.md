@@ -30,3 +30,19 @@ _Note: The -K option is Apple's standard version of ssh-add, which stores the pa
 ```
 git log --all --decorate --oneline --graph
 ```
+
+#### 解除现有远程仓库绑定，再增加新的
+```
+git remote remove origin
+git remote add origin URL_TO_GITHUB_REPO
+```
+
+#### 回滚到指定commitId
+```
+git reset --hard <commidId>
+```
+
+#### 查看提交记录
+```
+git show
+```
