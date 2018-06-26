@@ -14,3 +14,5 @@ title: What about webpack4
  - > Production mode enables all sorts of  optimizations out of the box. Including minification, scope hoisting, tree-shaking and more.
 
 [原文未完结](https://hackernoon.com/webpack-4-tutorial-all-you-need-to-know-from-0-conf-to-production-mode-d32759d0dc2d)
+
+[更新](https://www.valentinog.com/blog/webpack-tutorial/)

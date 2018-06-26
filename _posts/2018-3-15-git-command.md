@@ -46,3 +46,8 @@ git reset --hard <commidId>
 ```
 git show
 ```
+
+#### 查看仓库远程地址
+```
+git remote -v
+```
