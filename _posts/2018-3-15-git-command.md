@@ -51,3 +51,13 @@ git show
 ```
 git remote -v
 ```
+
+#### 删除本地分支
+```
+git branch -d the_local_branch
+```
+
+#### 为本地分支新增追踪的远程分支
+```
+git branch --set-upstream-to=origin/foo foo
+```
