@@ -61,3 +61,8 @@ git branch -d the_local_branch
 ```
 git branch --set-upstream-to=origin/foo foo
 ```
+
+#### 为克隆仓库制定文件名
+```
+git clone git@github.com:whatever folder-name
+```
