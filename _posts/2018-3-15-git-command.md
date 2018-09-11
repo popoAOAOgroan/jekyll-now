@@ -66,3 +66,15 @@ git branch --set-upstream-to=origin/foo foo
 ```
 git clone git@github.com:whatever folder-name
 ```
+
+#### Removing the last commit
+```
+git reset --hard HEAD^
+```
+To remove the last commit from git, you can simply run git reset --hard HEAD^ If you are removing multiple commits from the top, you can run git reset --hard HEAD~2 to remove the last two commits. You can increase the number to remove even more commits.
+
+#### Rebase
+```
+git rebase -i head~1
+```
+
