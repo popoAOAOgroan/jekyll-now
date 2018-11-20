@@ -15,3 +15,5 @@ chmod +x somefile
     a stands for all.
 
 
+#### :w !sudo tee % > /dev/null
+以sudo权限保存文件

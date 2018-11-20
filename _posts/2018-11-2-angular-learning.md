@@ -1,0 +1,110 @@
+---
+layout: post
+title: Angular学习笔记
+---
+
+**Decorator**
+修饰器是一个对类进行处理的函数。修饰器函数的第一个参数，就是所要修饰的目标类。
+* Decorators are a new feature of TypeScript.
+* With decorators we can customise our classes at design time.
+* They are just functions that add meta-data to the thing they are attached to.
+* Ts中的decorator：
+  1. Class decorators
+  2. Property decorators
+  3. Method decorators
+  4. Parameter decorators
+* Angular2重的decorator：
+  1. Class: @componnet @Ngmodule @Pipe @Injectable
+  2. Property: @Input @Output @ContentChild @ContentCildren @ViewChild @ViewChildren
+  3. Method: @HostListener
+  4. Parameter: @Inject @Optional @Self @SkipSelf @Host
+
+**@NgModule**
+* The NgModule classes differ from JavaScript module in the following key ways:
+  * An NgModule bounds declarable classes only. Declarables are the only classes that matter to the Angular compiler.
+  * Instead of defining all member classes in one giant file as in a JavaScript module, you list the module's classes in the @NgModule.declarations list.
+  * An NgModule can only export the declarable classes it owns or imports from other modules. It doesn't declare or export any other kind of class.
+  * Unlike JavaScript modules, an NgModule can extend the entire application with services by adding providers to the @NgModule.providers list.
+* API
+  * declarations—this application's lone component.The declarations array only takes declarables. Declarables are components, directives and pipes.
+  * imports—import BrowserModule to have browser specific services such as DOM rendering, sanitization, and location.
+  * exports makes the components,directives, and pipes available in modules that add this module to imports.
+  * providers—the service providers.
+  * bootstrap—the root component that Angular creates and inserts into the index.html host web page.
+
+**Components**
+* An Angular application is a Tree of components.
+* Each component has some Inputs and Outputs.
+* Components are composable
+* API: encapsulation(
+  * ViewEncapsulation.Native(isolated from the global styles/not supported by all browsers.)
+  * ViewEncapsulation.Emulated
+  * ViewEncapsulation.None(as a global style)
+  * @input/@output 
+)
+
+**Directives**
+* NgFor 
+* Ngid & NgSwitch
+* NgStyle & NgClass
+* NgNonBindable
+
+**@components vs @directives**
+  Write a component when you want to create a reusable set of DOM elements of UI with custom behaviour. Write a directive when you want to write reusable behaviour to supplement existing DOM elements.
+
+**when to use ngoninit & constructor**
+
+
+**LifecycleHooks**
+{ constructor (获取不到input )}
+{ ngOnChanges _(触发改变? called whenever one or more date-bound input properties change)_ }
+{ ngOnInit _(only called once)_}
+{ ngDoCheck _(脏检查完成?)_ :
+  ngAfterContentInit,
+  ngAfterContentChecked,
+  ngAfterViewInit,
+  ngAfterViewChecked
+}
+{ ngOnDestroy _(before destroys the component, detach event handlers to avoid memory leaks)_ }
+
+**组件通信**
+* passing the reference of one component to another
+* communication through parent component
+* communication through service
+* EventEmitter
+
+(**diff between interface & type**)[https://stackoverflow.com/questions/37233735/typescript-interfaces-vs-types]
+Unlike an interface declaration, which always introduces a named object type, a type alias declaration can introduce a name for any kind of type, including primitive, union, and intersection types.
+ * capability(
+    1. An interface can be named in an extends or implements clause, but a type alias for an object type literal cannot.
+    2. An interface can have multiple merged declarations, but a type alias for an object type literal cannot.
+
+ )
+
+**implements vs extends**
+* _extends_: the new class is a child. it gets benefits coming with inheritance. it has all properties, methods as its parent. it can override some of these and implement new, but the parent stuff already included.
+
+* _implements_: the new class can be treated as the same 'shape'?, while it is not a child. it could be passed to any method where the Person is required, regardless of having different parent then person.
+
+**services**
+Service is a broad category encompassing any value, function, or feature that an app needs.
+
+**Dependency Injection**
+DI is wired into the Angular framework and used everywhere to provide new components with the services or other things they need
+
+**private in class**
+
+**observable vs promises**
+* 1.Obs is more powerful to handling HTTP asynchronous requests. A promise handles a single event and operation completes or fails.
+* 2.An Objs like a stream which allows passing zero or more events where the callback is called for each event. A promise eventually calls the success or failed callback even when you don't need the notification or the result it provides anymore. 
+* 3.Obs works with multiple values for a particular time. Promises works with single value at a time.
+* 4.Obs can be canceled. Promise can't.
+* 5.Objs can 'retry' whenever needed. Promise can't.
+
+**functionality of Angular Core**
+
+**Karma+Jasmine**
+
+**打包原理**
+
+**spring-boot**
