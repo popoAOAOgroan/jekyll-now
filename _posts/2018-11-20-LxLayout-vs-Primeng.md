@@ -1,13 +1,12 @@
 ---
 layout: post
-title: FxLayout VS. Primeng
+title: FxLayout VS. Primeflex
 ---
 
-# FxLayout VS. Primeflex
 **[Flex Layout](https://github.com/angular/flex-layout/wiki)**是基于Flex+mediaQuery的Angular模块，为复杂布局提供解决方案。不仅为使用者提供了自定义的布局API，和mediaQuery的Observables，还注入DOM flexbox-2016 css样式（并不知道这个是啥）。
 
 **[Flex Grid CSS](https://github.com/primefaces/primeflex)**
-Prime的FlexGrid是基于Flex的适用于多端设备的ui responsive layout工具库。它并不包含在PrimeNG里而是由PrimeFlex提供。并被在PrimeNG PrimeReact等框架里使用。
+Prime的FlexGrid是基于Flex的适用于多端设备的ui responsive layout工具库。它并不包含在PrimeNG里而是由PrimeFlex提供，并被在PrimeNG PrimeReact等框架里使用，可被单独引用。
 
 
 ## FxLayout API
