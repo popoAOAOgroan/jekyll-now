@@ -3,6 +3,10 @@ layout: post
 title: git command
 ---
 
+## Diff between 'fetch' and 'pull'
+* 共同点：都是用来从远程拉取新的data。
+* 不同点：fetch不会造成任何负面影响，它不会影响你当前得工作流。pull会将远程分支merge到当前分支，会和当前已修改得文件产生冲突。
+
 ## Git command 记录一些常用的git命令
 
 #### _refresh remote branch_ 获取本地分支
