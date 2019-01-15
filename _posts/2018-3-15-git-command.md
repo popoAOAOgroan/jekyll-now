@@ -2,6 +2,38 @@
 layout: post
 title: git command
 ---
+## 删除未提交commit
+delete the most revent commit and keeping the work
+```
+git reset --soft HEAD~1
+```
+delete the most recent commit and destorying the work
+```
+git reset --hard HEAD~1
+```
+
+## 重写history
+1. '--amend': 修改最后一次提交。
+e.g 仅仅修改上一次的message
+```
+git commit --amend -m "an updated commit message"
+```
+e.g 仅仅修改上一次的提交内容
+```
+# Edit hello.py and main.py git add hello.py git commit
+# Realize you forgot to add the changes from main.py git add main.py
+git commit --amend --no-edit
+```
+*不能修改已经提交了的commit。因为amend后的commit将会是全新的commit。可能会造成协作开发者的困惑。
+2. 'git rebase'
+3. 'git reflog'
+
+
+## 删除本地分支
+git branch -D topic/april/nav
+
+## 删除远程分支
+git push --delete <remote_name> <branch_name>
 
 ## Diff between 'fetch' and 'pull'
 * 共同点：都是用来从远程拉取新的data。
