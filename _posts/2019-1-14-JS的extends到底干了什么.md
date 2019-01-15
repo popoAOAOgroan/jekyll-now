@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 当我们在extend时，我们干了些啥？
+title: 当我们在extend（ts）时，我们干了些啥？
 ---
 ## 前情提要
 **对es6中class的定义**
@@ -137,3 +137,11 @@ var c = new B();
 console.log('c', c);
 
 ```
+
+## 补充
+这里的extends和原生JS中的extends还是有区别的
+
+When using the class keyword in TypeScript, you are actually creating two things with the same identifier:
+
+    A TypeScript interface containing all the instance methods and properties of the class; and
+    A JavaScript variable with a different (anonymous) constructor function type
