@@ -145,3 +145,7 @@ When using the class keyword in TypeScript, you are actually creating two things
 
     A TypeScript interface containing all the instance methods and properties of the class; and
     A JavaScript variable with a different (anonymous) constructor function type
+
+
+## 参考
+https://github.com/zhongsp/TypeScript/blob/master/doc/handbook/Classes.md

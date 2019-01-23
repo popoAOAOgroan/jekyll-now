@@ -2,6 +2,10 @@
 layout: post
 title: git command
 ---
+
+## cherry-pick
+给定一个或多个现有提交，拉取每个提交引入的更改，为每个提交记录一个新提交。
+
 ## 删除未提交commit
 delete the most revent commit and keeping the work
 ```
